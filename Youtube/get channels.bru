@@ -1,0 +1,23 @@
+meta {
+  name: get channels
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://www.googleapis.com/youtube/v3/search?part=snippet&q=TasneemHajimaming&type=channel&key=AIzaSyCFR1mzkRdzf233r-aS9Mnc_LZDjMbJllk
+  body: none
+  auth: inherit
+}
+
+params:query {
+  part: snippet
+  q: TasneemHajimaming
+  type: channel
+  key: AIzaSyCFR1mzkRdzf233r-aS9Mnc_LZDjMbJllk
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
