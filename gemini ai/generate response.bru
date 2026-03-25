@@ -1,0 +1,146 @@
+meta {
+  name: generate response
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://generativelanguage.googleapis.com/v1beta/tunedModels/tuned-model-demo-gyqsasf14399:generateContent?key=AIzaSyBCPPrq5NChci4Et4yxtVjYcmga04Kbu7o
+  body: json
+  auth: inherit
+}
+
+params:query {
+  key: AIzaSyBCPPrq5NChci4Et4yxtVjYcmga04Kbu7o
+  ~: 
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "contents": [
+          {
+              "role": "user",
+              "parts": [
+                  {
+                     "text" : "Hi"
+                  }
+              ]
+          }
+         
+      ],
+      "generationConfig": {
+          "temperature": 1,
+          "topK": 40,
+          "topP": 0.95,
+          "maxOutputTokens": 8192,
+          "responseMimeType": "text/plain"
+      },
+      // "systemInstruction": {
+      //     "role": "user",
+      //     "parts": [
+      //         {
+      //             "text": "could you please read content in this image "
+      //         }
+      //     ]
+      // }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: generate response
+  
+  request: {
+    url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyDM1KL99YLPdNdWmIyM50PZzUO0KqOZdp4
+    method: POST
+    mode: json
+    params:query: {
+      key: AIzaSyDM1KL99YLPdNdWmIyM50PZzUO0KqOZdp4
+    }
+  
+    headers: {
+      Content-Type: application/json
+    }
+  
+    body:json: {
+      {
+          "contents": [
+              {
+                  "role": "user",
+                  "parts": [
+                      {
+                          "text": "give me the sample json array props type , text ,"
+                      }
+                  ]
+              },
+      
+          ],
+          "generationConfig": {
+              "temperature": 1,
+              "topK": 40,
+              "topP": 0.95,
+              "maxOutputTokens": 8192,
+              "responseMimeType": "application/json"
+          }
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json; charset=UTF-8
+      Vary: Origin
+      Vary: X-Origin
+      Vary: Referer
+      Content-Encoding: gzip
+      Date: Tue, 19 Nov 2024 06:42:58 GMT
+      Server: scaffolding on HTTPServer2
+      X-XSS-Protection: 0
+      X-Frame-Options: SAMEORIGIN
+      X-Content-Type-Options: nosniff
+      Server-Timing: gfet4t7; dur=3354
+      Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding: chunked
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "candidates": [
+                {
+                    "content": {
+                        "parts": [
+                            {
+                                "text": "[{\"props\": {\"text\": \"value1\", \"id\": \"1\"}, \"text\": \"text1\"}, {\"props\": {\"text\": \"value2\", \"id\": \"2\"}, \"text\": \"text2\"}, {\"props\": {\"text\": \"value3\", \"id\": \"3\"}, \"text\": \"text3\"}]\n"
+                            }
+                        ],
+                        "role": "model"
+                    },
+                    "finishReason": "STOP",
+                    "avgLogprobs": -0.084707346227433949
+                }
+            ],
+            "usageMetadata": {
+                "promptTokenCount": 12,
+                "candidatesTokenCount": 72,
+                "totalTokenCount": 84
+            },
+            "modelVersion": "gemini-1.5-pro-002"
+        }
+      '''
+    }
+  }
+}

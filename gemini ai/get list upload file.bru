@@ -1,0 +1,101 @@
+meta {
+  name: get list upload file
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://generativelanguage.googleapis.com/v1beta/files/?key=AIzaSyDM1KL99YLPdNdWmIyM50PZzUO0KqOZdp4
+  body: none
+  auth: inherit
+}
+
+params:query {
+  key: AIzaSyDM1KL99YLPdNdWmIyM50PZzUO0KqOZdp4
+}
+
+settings {
+  encodeUrl: true
+}
+
+example {
+  name: get list upload file
+  
+  request: {
+    url: https://generativelanguage.googleapis.com/v1beta/files/?key=AIzaSyDM1KL99YLPdNdWmIyM50PZzUO0KqOZdp4
+    method: GET
+    mode: none
+    params:query: {
+      key: AIzaSyDM1KL99YLPdNdWmIyM50PZzUO0KqOZdp4
+    }
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json; charset=UTF-8
+      Vary: Origin
+      Vary: X-Origin
+      Vary: Referer
+      Content-Encoding: gzip
+      Date: Fri, 15 Nov 2024 08:01:13 GMT
+      Server: scaffolding on HTTPServer2
+      X-XSS-Protection: 0
+      X-Frame-Options: SAMEORIGIN
+      X-Content-Type-Options: nosniff
+      Server-Timing: gfet4t7; dur=509
+      Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding: chunked
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+            "files": [
+                {
+                    "name": "files/rtsezwvwvy5",
+                    "displayName": "TEXT",
+                    "mimeType": "application/pdf",
+                    "sizeBytes": "18810",
+                    "createTime": "2024-11-15T07:26:05.136232Z",
+                    "updateTime": "2024-11-15T07:26:05.136232Z",
+                    "expirationTime": "2024-11-17T07:26:05.061644921Z",
+                    "sha256Hash": "MjI5ZGVmYmIwY2VlNmYwMjY3M2E1Y2RlMjkwZDA2NzNlNzVhMGRjMzFjZWM0Mzk4OWM4YWIyYTRlY2E3ZTFiYg==",
+                    "uri": "https://generativelanguage.googleapis.com/v1beta/files/rtsezwvwvy5",
+                    "state": "ACTIVE"
+                },
+                {
+                    "name": "files/x592y39sbpzy",
+                    "displayName": "TEXT",
+                    "mimeType": "application/pdf",
+                    "sizeBytes": "18810",
+                    "createTime": "2024-11-15T07:25:17.756271Z",
+                    "updateTime": "2024-11-15T07:25:17.756271Z",
+                    "expirationTime": "2024-11-17T07:25:17.682173668Z",
+                    "sha256Hash": "MjI5ZGVmYmIwY2VlNmYwMjY3M2E1Y2RlMjkwZDA2NzNlNzVhMGRjMzFjZWM0Mzk4OWM4YWIyYTRlY2E3ZTFiYg==",
+                    "uri": "https://generativelanguage.googleapis.com/v1beta/files/x592y39sbpzy",
+                    "state": "ACTIVE"
+                },
+                {
+                    "name": "files/5pyj5gmvph4r",
+                    "displayName": "TEXT",
+                    "mimeType": "application/pdf",
+                    "sizeBytes": "18810",
+                    "createTime": "2024-11-15T06:08:45.660818Z",
+                    "updateTime": "2024-11-15T06:08:45.660818Z",
+                    "expirationTime": "2024-11-17T06:08:45.587025442Z",
+                    "sha256Hash": "MjI5ZGVmYmIwY2VlNmYwMjY3M2E1Y2RlMjkwZDA2NzNlNzVhMGRjMzFjZWM0Mzk4OWM4YWIyYTRlY2E3ZTFiYg==",
+                    "uri": "https://generativelanguage.googleapis.com/v1beta/files/5pyj5gmvph4r",
+                    "state": "ACTIVE"
+                }
+            ]
+        }
+      '''
+    }
+  }
+}
