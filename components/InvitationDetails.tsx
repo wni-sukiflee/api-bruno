@@ -1,8 +1,16 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { MapPin, Calendar, Clock, Heart, Utensils, Send, CalendarPlus } from 'lucide-react';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import {
+  MapPin,
+  Calendar,
+  Clock,
+  Heart,
+  Utensils,
+  Send,
+  CalendarPlus,
+} from "lucide-react";
 
 export default function InvitationDetails() {
   return (
@@ -13,7 +21,9 @@ export default function InvitationDetails() {
         whileInView={{ opacity: 1, y: 0 }}
         className="text-center mb-12"
       >
-        <h2 className="font-serif italic text-3xl md:text-4xl text-[#5A5A40] mb-2">Details of the Day</h2>
+        <h2 className="font-serif italic text-3xl md:text-4xl text-[#5A5A40] mb-2">
+          Details of the Day
+        </h2>
         <p className="font-serif text-[#5A5A40]/70 text-[10px] md:text-xs tracking-[0.2em] uppercase">
           Everything you need to know about our special day
         </p>
@@ -34,29 +44,37 @@ export default function InvitationDetails() {
             referrerPolicy="no-referrer"
           />
         </div>
-        
+
         <div className="p-8 md:p-12">
-          <h3 className="font-serif text-2xl text-[#5A5A40] font-bold mb-6">Location</h3>
-          <p className="font-serif text-[#5A5A40]/80 mb-8">PuPo, Rueso, Narathiwat</p>
+          <h3 className="font-serif text-2xl text-[#5A5A40] font-bold mb-6">
+            Location
+          </h3>
+          <p className="font-serif text-[#5A5A40]/80 mb-8">Baroh, Yaha, Yala</p>
 
           <div className="space-y-6 mb-12">
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-full bg-[#A0815C]/20 flex items-center justify-center text-[#5A5A40]">
                 <MapPin size={20} />
               </div>
-              <span className="font-serif text-sm text-[#5A5A40]/80">PuPo, Rueso, Narathiwat, Thailand</span>
+              <span className="font-serif text-sm text-[#5A5A40]/80">
+                Baroh, Yaha, Yala, Thailand
+              </span>
             </div>
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-full bg-[#A0815C]/20 flex items-center justify-center text-[#5A5A40]">
                 <Calendar size={20} />
               </div>
-              <span className="font-serif text-sm text-[#5A5A40]/80">Thursday, April 30, 2026</span>
+              <span className="font-serif text-sm text-[#5A5A40]/80">
+                Thursday, April 30, 2026
+              </span>
             </div>
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-full bg-[#A0815C]/20 flex items-center justify-center text-[#5A5A40]">
                 <Clock size={20} />
               </div>
-              <span className="font-serif text-sm text-[#5A5A40]/80">From 09:00 AM</span>
+              <span className="font-serif text-sm text-[#5A5A40]/80">
+                From 09:00 AM
+              </span>
             </div>
           </div>
 
@@ -79,7 +97,9 @@ export default function InvitationDetails() {
         whileInView={{ opacity: 1, y: 0 }}
         className="text-center mb-16"
       >
-        <h2 className="font-serif italic text-3xl md:text-4xl text-[#5A5A40] mb-2">Program of the Day</h2>
+        <h2 className="font-serif italic text-3xl md:text-4xl text-[#5A5A40] mb-2">
+          Program of the Day
+        </h2>
         <p className="font-serif text-[#5A5A40]/70 text-[10px] md:text-xs tracking-[0.2em] uppercase">
           Join us through every moment of our celebration
         </p>
@@ -88,7 +108,7 @@ export default function InvitationDetails() {
       {/* Timeline */}
       <div className="w-full max-w-xl relative">
         <div className="absolute left-6 top-0 bottom-0 w-[1px] bg-[#5A5A40]/20 hidden md:block" />
-        
+
         <div className="space-y-12">
           {/* Item 1 */}
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 relative">
@@ -97,11 +117,16 @@ export default function InvitationDetails() {
             </div>
             <div className="flex-1 bg-[#fdfaf5]/80 p-6 rounded-2xl shadow-sm border border-white/50 w-full">
               <div className="flex justify-between items-start mb-2">
-                <h4 className="font-serif text-xl text-[#5A5A40] font-bold">Wedding Ceremony</h4>
-                <span className="text-xs font-serif bg-[#5A5A40]/10 px-2 py-1 rounded text-[#5A5A40]">09:00</span>
+                <h4 className="font-serif text-xl text-[#5A5A40] font-bold">
+                  Wedding Ceremony
+                </h4>
+                <span className="text-xs font-serif bg-[#5A5A40]/10 px-2 py-1 rounded text-[#5A5A40]">
+                  09:00
+                </span>
               </div>
               <p className="font-serif text-[#5A5A40]/70 text-sm leading-relaxed">
-                We invite you to witness this momentous occasion, to record a new chapter in our lives as we begin our vows together.
+                We invite you to witness this momentous occasion, to record a
+                new chapter in our lives as we begin our vows together.
               </p>
             </div>
           </div>
@@ -113,8 +138,12 @@ export default function InvitationDetails() {
             </div>
             <div className="flex-1 bg-[#fdfaf5]/80 p-6 rounded-2xl shadow-sm border border-white/50 w-full">
               <div className="flex justify-between items-start mb-2">
-                <h4 className="font-serif text-xl text-[#5A5A40] font-bold">Eating</h4>
-                <span className="text-xs font-serif bg-[#5A5A40]/10 px-2 py-1 rounded text-[#5A5A40]">11:00</span>
+                <h4 className="font-serif text-xl text-[#5A5A40] font-bold">
+                  Eating
+                </h4>
+                <span className="text-xs font-serif bg-[#5A5A40]/10 px-2 py-1 rounded text-[#5A5A40]">
+                  11:00
+                </span>
               </div>
               <p className="font-serif text-[#5A5A40]/70 text-sm leading-relaxed italic">
                 Dining is available until 6 pm.
