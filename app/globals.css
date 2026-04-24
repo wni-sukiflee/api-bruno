@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  --font-cursive: var(--font-dancing);
+}
+
+html,
+body {
+  @apply bg-[#f5f5f0] overflow-x-hidden;
+}
